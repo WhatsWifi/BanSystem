@@ -1,0 +1,61 @@
+# Set settings for messages here! Originally built for Nations.
+# PERMISSIONS:
+# bansystem.admin > all admin commands
+# bansystem.ban > ban perms
+# bansystem.mute > mute perms
+# bansystem.unban > unban perms
+# bansystem.unmute > unmute perms
+#
+# Skript by WhatsWifi. Thanks for using it!
+variables:
+  bsprefix = "&7[&5BanSystem&7]"
+  bsver = "v1.7"
+
+function logger(text: text):
+  send "%{bsprefix}% %{_text}%" to console
+
+# Doesn't detect any players when used
+# function msg(text: text,):
+#   message "%{bsprefix}% %{_text}%"
+
+on load:
+  wait 3 seconds
+  logger("&b&lRUNNING INIT SCRIPTS!")
+  logger("&b&l[INIT] &eLoading variables...")
+
+  wait 2 seconds
+  logger("&b&l[INIT] &aDone.")
+  logger("&b&l[INIT] &eLoading punishment list...")
+  wait 1 seconds
+  logger("&b&l[INIT] &aDone.")
+  logger("&b&l[INIT] &eLoading players...")
+  wait 3 seconds
+  logger("&b&l[INIT] &aDone.")
+  logger("&aLoaded skript successfuly! &e(unless, of course, console outputs any errors which shouldn't happen)")
+  logger("&bBan System &d(with GUI!)&b by WhatsWifi %{bsver}%")
+  logger("&2For help, type &3/bansystem help")
+
+on unload:
+  logger("&cScript has been disabled. Thanks for using it!")
+
+on join:
+  if {banned.%player's UUID%} is true:
+    kick player because "&c&lYou are banned from &3&lNATIONS&c&l!%nl%%nl%&eBanned by: &7%{bannedby.%player's UUID%}%%nl%&eBanned for: &7%{banreason.%player's UUID%}%%nl%&eBanned for: &7%{bantime.%player's UUID%}%"
+
+command /bansystem [<text>] [<text>]:
+  trigger:
+    if arg 1 is not set:
+      if executor is player:
+        if player does not have permission "bansystem.admin":
+          message "%{bsprefix}% &bBan System &d(with GUI!)&b by WhatsWifi %{bsver}%"
+        else:
+          message "%{bsprefix}% &bBan System &d(with GUI!)&b by WhatsWifi %{bsver}%"
+          message "%{bsprefix}% &aIt appears you have the proper perms for all the commands! You can see them with &6/bansystem help"
+      if executor is console:
+        message "%{bsprefix}% &bBan System &d(with GUI!)&b by WhatsWifi %{bsver}%"
+        message "%{bsprefix}% &aYou are using console so you have all the perms! You can see the commands with &6/bansystem help"
+    if arg 1 is "help":
+      message "&9&lBan system commands:"
+      message "&9<text> - Required text"
+      message "&9[text] - Optional text"
+      message "&6/ban <player> [reason] &e- &bBan a player using the neat GUI, or specify your own reason to skip the GUI!"
