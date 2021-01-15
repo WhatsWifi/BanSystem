@@ -40,7 +40,6 @@ on load:
   set {_t} to last http response
   set {_j} to {_t}'s body
   set {_v::*} to {_j} split at "|"
-  send "&7[&a&lRTP&7] - &2Loaded successfully" to console
   if "{@version}" is not equal to "%{_v::2}%":
       logger("&2Found update! You may update to version &e%{_v::2}% &2with &e/bansystem update")
   else:
