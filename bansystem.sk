@@ -64,10 +64,18 @@ command /bansystem [<text>] [<text>]:
       if executor is console:
         message "%{bsprefix}% &bBan System &d(with GUI!)&b by WhatsWifi %{bsver}%"
         message "%{bsprefix}% &aYou are using console so you have all the perms! You can see the commands with &6/bansystem help"
-    if arg 1 is "help":
+    else if arg 1 is "help":
       message "&9&lBan system commands:"
       message "&9<text> - Required text"
       message "&9[text] - Optional text"
       message "&6/ban <player> [reason] &e- &bBan a player using the neat GUI, or specify your own reason to skip the GUI!"
       message "&6/mute <player> [reason] &e- &bMute the player using a GUI, or specify your own reason to skip the GUI!"
       message "&6/punish <player> [reason] &e- &bPunish a player using the GUI."
+      message "&6/bansystem reload &e- &bReload the script"
+      message "&6/bansystem update &e- &bUpdates the script"
+    else if arg 1 is "reload":
+      message "%{bsprefix}% &eReloading script... (this may cause slight lag near the future)"
+      execute console command "/skript reload bansystem"
+      message "%{bsprefix}% &aDone."
+    else if arg 1 is "update":
+      message "%{bsprefix}% &cThis feature does not work with 1.16. Please download the latest file from &bhttps://github.com/WhatsWifi/BanSystem&c. Thank you for keeping the script up to date!"
