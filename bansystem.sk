@@ -39,9 +39,8 @@ on load:
   send a "GET" request to "https://raw.githubusercontent.com/WhatsWifi/BanSystem/main/version"
   set {_t} to last http response
   set {_j} to {_t}'s body
-  set {_v::*} to {_j} split at "|"
-  if "{@version}" is not equal to "%{_v::2}%":
-    logger("&2Found update! You may update to version &e%{_v::2}% &2with &e/bansystem update")
+  if "{@version}" is not equal to "%{_t}%":
+    logger("&2Found update! You may update to version &e%{_t}% &2with &e/bansystem update")
   else:
     logger("&aYou are running the latest version! &e({@version})")
 
