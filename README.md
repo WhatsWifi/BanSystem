@@ -1,3 +1,5 @@
+v0.1
+
 # BanSystem
 Simple ban system with GUI for Nations server
 
