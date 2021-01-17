@@ -8,7 +8,7 @@
 #
 # Skript by WhatsWifi. Thanks for using it!
 options:
-  version: 1.0
+  version: 0.1-alpha
 variables:
   bsprefix = "&7[&5BanSystem&7]"
 
@@ -36,7 +36,7 @@ on load:
   logger("&bBan System &d(with GUI!)&b by WhatsWifi %{bsver}%")
   logger("&2For help, type &3/bansystem help")
   logger("&6Checking for update...")
-  send a "GET" request to "https://raw.githubusercontent.com/ShaneBeee/RandomTP/master/version"
+  send a "GET" request to "https://raw.githubusercontent.com/WhatsWifi/BanSystem/main/version"
   set {_t} to last http response
   set {_j} to {_t}'s body
   set {_v::*} to {_j} split at "|"
