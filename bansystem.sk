@@ -79,3 +79,16 @@ command /bansystem [<text>] [<text>]:
       message "%{bsprefix}% &aDone."
     else if arg 1 is "update":
       message "%{bsprefix}% &cThis feature does not work with 1.16. Please download the latest file from &bhttps://github.com/WhatsWifi/BanSystem&c. Thank you for keeping the script up to date!"
+
+command /ban [<offlineplayer>] [<text>]:
+  permission: bansystem.ban
+  permission message: &c%{bsprefix}% &cNo permission!
+  trigger:
+    if arg 1 is not set:
+      message "&c%{bsprefix}% &cYou need to specify a player to ban!"
+    if arg 1 is set:
+      open chest with 1 row named "What do you want to do with this player?" to player
+      wait 1 tick
+      format slot 3 of player with redstone named "&cMute Player" with lore "&7Click to mute this player!||&7You can select a mute reason on the next||screen, or specify one in the||command." to close then run [message "&cNot implemented yet."]
+      format slot 4 of player with redstone block named "&cBan Player" with lore "&7Click to &cBAN&7 this player!||&7You can select a mute reason on the next||screen, or specify one in the||command." to close then run [message "&cNot implemented yet."]
+      format slot 5 of player with barrier named "&bExit" with lore "&7Click to exit this GUI" to close
