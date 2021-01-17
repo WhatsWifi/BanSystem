@@ -2,23 +2,31 @@
 Simple ban system with GUI for Nations server
 
 # HOW TO INSTALL
-**STEP 1:** Download the _latest_ version of skript from [here](https://github.com/SkriptLang/Skript/releases)
 
-**STEP 2:** Download the _latest_ version of SkQuery from [here](https://github.com/SkQuery/SkQuery/releases/latest)
+**REQUIREMENTS:**
+Skript: [Download here](https://github.com/SkriptLang/Skript/releases)
 
-**STEP 3:** Copy both the Skript plugin and SkQuery to your plugins folder
+SkQuery: [Download here](https://github.com/SkQuery/SkQuery/releases/latest)
+
+Reqn: [Download here](https://github.com/btk5h/reqn/releases/latest)
+
+SkUtilities: [Download here](https://github.com/tim740/skUtilities/releases/latest)
+
+**INSTRUCTIONS**
+
+**STEP 3:** Copy all 4 plugins that you downloaded into your plugins folder.
 
 **STEP 4:** Restart your server.
 
 **STEP 5:** After it is done, head over into your plugins folder, and inside it you will find a folder called Skript. Open it, and navigate to the scripts folder.
 
-**STEP 6:** Download the latest version of this skript, and move it to your scripts folder.
+**STEP 6:** Head over to [this link](https://github.com/WhatsWifi/BanSystem/releases/latest) and download the first version on the top. Make sure you download both _bansystem.sk_ and _json.sk_.
 
-**STEP 6.5** This is a required file for certain commands to work properly. Download json.sk and also drag it into your plugins folder
+**STEP 7:** Move both of these files into the scripts folder you found earlier.
 
-**STEP 7:** In console, or ingame (if you have permisssions) type `/sk reload scripts`
+**STEP 8:** In console, or ingame (if you have permission) type `/sk reload scripts`
 
-**STEP 8:** Enjoy!
+**STEP 9:** Enjoy!
 
 # Join Nations:
 [Discord link (You may find IP here)](https://discord.gg/Bw476Tu7eD)
