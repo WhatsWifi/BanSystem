@@ -4,6 +4,7 @@ Simple ban system with GUI for Nations server
 # HOW TO INSTALL
 
 **REQUIREMENTS:**
+
 Skript: [Download here](https://github.com/SkriptLang/Skript/releases)
 
 SkQuery: [Download here](https://github.com/SkQuery/SkQuery/releases/latest)
